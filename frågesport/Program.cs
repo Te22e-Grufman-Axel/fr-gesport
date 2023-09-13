@@ -1,9 +1,28 @@
-﻿string spelaIgen = "ja";
-
-while (spelaIgen == "ja")
+﻿while (true)
 {
 
     int points = 0;  //skapar en variabel för att hålla koll på poäng
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine("");
+    Console.WriteLine("");
+    Console.WriteLine("                 .");
+    Console.WriteLine("                .m");
+    Console.WriteLine("               ,mm");
+    Console.WriteLine("               MM:");
+    Console.WriteLine("          .    Ymm,");
+    Console.WriteLine("          M    'MMM,");
+    Console.WriteLine("          M.    MMM     ,");
+    Console.WriteLine("          MM,  ,MMM    .M "); //AscII art
+    Console.WriteLine("          'MM, MMM'  ,MM'");
+    Console.WriteLine("          ,MMM.MMMMM.MMM,");
+    Console.WriteLine("          MMMMMMMMMMMMMMM");
+    Console.WriteLine("          MMMMMMMMMMMMMMM");
+    Console.WriteLine("           '''''''''''''");
+
+    Console.WriteLine("");
+    Console.WriteLine(""); // Tom plats mellan bilden och resten av texten
+    Console.WriteLine("");
+    Console.WriteLine("");
 
     Console.WriteLine("Välkommen till Axels frågesport ");
     Console.WriteLine("För att börja klicka på valfri knapp"); //Välkomand text
@@ -104,6 +123,12 @@ while (spelaIgen == "ja")
         Console.WriteLine("Du fick ingen rätt");     //om man får 0 poäng
         Console.WriteLine("Du fick " + points);
     }
+    else if (points == 4)
+    {
+        Console.WriteLine("DU fick" + points + "Rätt!!!!");
+        Console.WriteLine("Du vann med alla rätt");
+        Console.WriteLine("Grattis!!!!!!!!!!!");
+    }
     else
     {
         Console.WriteLine("Du klarade det");
@@ -111,8 +136,7 @@ while (spelaIgen == "ja")
 
     }
     // ------------------------------
-Console.WriteLine("Tryck på en knapp för att köra igen");
+    Console.WriteLine("Tryck på en knapp för att köra igen");
     Console.ReadKey();
- spelaIgen = "ja";
- Console.Clear();
+    Console.Clear();
 }
